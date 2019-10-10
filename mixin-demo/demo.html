@@ -1,0 +1,8 @@
+<script src=dist/ravelin.min.js></script>
+<script>
+    ravelinjs.init({rsaKey: "=== BEGIN ==="});
+    console.log('encrypt', ravelinjs.encrypt("secret"));
+
+    ravelinjs.setPublicAPIKey("pk_123");
+    console.log('track', ravelinjs.track("evt", {yes: true}));
+</script>

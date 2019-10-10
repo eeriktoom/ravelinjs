@@ -1,0 +1,15 @@
+{
+  "name": "@ravelin/mixin-demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "terser-webpack-plugin": "^2.1.2",
+    "webpack": "^4.41.0"
+  }
+}
