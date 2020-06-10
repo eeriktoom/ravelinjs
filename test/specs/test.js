@@ -1,6 +1,22 @@
 describe('ravelinjs', function() {
     const cap = browser.desiredCapabilities;
 
+    before(function() {
+      try {
+        browser.log('browser');
+      } catch(errIgnore) {}
+    });
+    afterEach(function() {
+      try {
+        const resp = browser.log('browser');
+        for (log of resp.value) {
+          console.info(log.level, log.message);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    });
+
     it('can be used with a script tag', function() {
         browser.waitForURL('/pages/scripttag/index.html', cap.navigateTimeoutMS);
         suite(browser, cap);
