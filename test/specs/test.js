@@ -54,12 +54,12 @@ function suite(browser, cap) {
     browser.setValue('#year', '2019');
     browser.click('#update');
 
+    // Wait for something to happen.
+    browser.waitForText('#output, #output-error', 3000);
+
     // Check there was no error.
     var error = browser.getText('#output-error');
     if (error) throw new Error(error);
-
-    // Check the result looked valid.
-    browser.getText('#output').should.not.be.empty;
 }
 
 function usuallyIt(itDoes) {
