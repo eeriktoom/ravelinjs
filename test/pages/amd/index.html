@@ -43,8 +43,8 @@
     <script src="require.js"></script>
     <script>
         output(function() {
-            console.log(document, document.getElementById('update'));
-            return 'loaded';
+            console.log({document: document, update: document.getElementById('update')});
+            return 'loaded ' + window.location.href;
         });
         // document.getElementById('update').onclick = function() {
         //     output(() => 'clicked');
