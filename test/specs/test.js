@@ -60,6 +60,9 @@ function suite(browser, cap) {
     // Check there was no error.
     var error = browser.getText('#output-error');
     if (error) throw new Error(error);
+
+    // Check the output.
+    browser.getText('#output').should.contain('aesKeyCiphertext');
 }
 
 function usuallyIt(itDoes) {
