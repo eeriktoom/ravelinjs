@@ -23,7 +23,13 @@
     }
 
     // Show the output.
-    if (output) stdout.appendChild(document.createTextNode(output));
-    if (error) stderr.appendChild(document.createTextNode(error));
+    if (output) {
+      console.info(output);
+      stdout.appendChild(document.createTextNode(output));
+    }
+    if (error) {
+      console.error(error);
+      stderr.appendChild(document.createTextNode(error));
+    }
   }
 }));
