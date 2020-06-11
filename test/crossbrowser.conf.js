@@ -155,6 +155,7 @@ exports.config = Object.assign(base, {
           platformVersion: '5.0',
           platformName: 'Android',
           deviceOrientation: 'portrait',
+          record_video: 'true',
         },
         // iOS
         // {
